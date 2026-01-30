@@ -1,0 +1,167 @@
+```latex
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% --- FONT & LAYOUT OPTIONS ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Optimized margins for readability vs. density
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% --- SECTION FORMATTING ---
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\pdfgentounicode=1
+
+% --- CUSTOM COMMANDS ---
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-4pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Pritesh Gurjar} \\ \vspace{1pt}
+    \small Cleveland, OH $|$ +1 (216)-240-8814 $|$ \href{mailto:pritesh.gurjar2024@gmail.com}{\underline{pritesh.gurjar2024@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/pritesh-gurjar-aa3b87175}{\underline{LinkedIn}} $|$
+    \href{https://github.com/Pritesh24gurjar}{\underline{GitHub}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {Case Western Reserve University}{Cleveland, OH}
+      {Master of Science in Computer Science $|$ GPA: 3.76/4.0}{Aug 2024 -- May 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Deep Learning for Vision, Generative AI, Distributed Systems, High-Performance Computing}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Deep Learning \& Vision:} PyTorch, TensorFlow, Keras, Hugging Face, Computational Photography, Image Processing (OpenCV), GANs, Diffusion Models, CLIP, Multi-Modal Systems \\
+     \textbf{GenAI Engineering:} RAG Pipelines, Semantic Search, Vector Embeddings (FAISS/Milvus), Prompt Engineering, Model Evaluation (NDCG, MRR) \\
+     \textbf{Programming \& Data:} Python (NumPy, Pandas, Scikit-learn), C++, Java, SQL, PySpark, Statistical Modeling \\
+     \textbf{Infrastructure \& HPC:} Docker, Kubernetes, Azure, Linux/Unix, Distributed Systems, Cloud Load Balancers \\
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE (Prioritized Research)-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+   \resumeSubheading
+      {AI Research Assistant -- Agentic AI Systems}{Oct 2024 -- Present}
+      {University Technology (UTech), CWRU}{Cleveland, OH}
+      \resumeItemListStart
+        \resumeItem{Designed and evaluated complex multi-agent research orchestration systems leveraging \textbf{LangGraph} and \textbf{Model Context Protocol (MCP)}, enabling autonomous workflows for 500+ faculty members.}
+        \resumeItem{Developed robust evaluation frameworks utilizing \textbf{NDCG and MRR} to rigorously benchmark retrieval and ranking quality, achieving a 20\% improvement in answer relevance through iterative re-ranking optimizations.}
+        \resumeItem{Implemented secure tool-calling architectures allowing LLMs to interface with internal APIs, ensuring FERPA data compliance and increasing research productivity by 35\%.}
+        \resumeItem{Standardized reusable AI components and prompt caching mechanisms on Linux servers, reducing token costs by 30\% and establishing a baseline for future agent deployments.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {Software Engineer -- Full stack \& Data Engineering}{Jul 2022 -- Dec 2024}
+      {NielsenIQ}{Pune, India}
+      \resumeItemListStart
+        \resumeItem{Engineered scalable, high-throughput backend services using Java Spring Boot and React, optimizing RESTful APIs for production systems requiring 99.9\% uptime.}
+        \resumeItem{Designed and managed high-volume data pipelines using \textbf{PySpark} and \textbf{MongoDB}, processing 10M+ records for downstream ML feature stores and ensuring data consistency.}
+        \resumeItem{Optimized web server configuration using Nginx and cloud load balancers, drastically reducing API latency through efficient thread management and asynchronous processing.}
+        \resumeItem{Deployed and maintained production microservices using \textbf{Docker and Kubernetes}, focusing on infrastructure reliability and efficient resource utilization in a large-scale cloud environment.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS (Prioritized Vision/Multimodal)-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\textbf{EduAssist-AI} -- Full-Stack Multimodal RAG Pipeline $|$ \emph{React, FastAPI, Whisper, CLIP, FAISS}} {2024}
+        \resumeItemListStart
+          \resumeItem{Architected a full-stack multimodal GenAI system integrating \textbf{Whisper v3} (audio), \textbf{CLIP} (vision encoding), and \textbf{T5} (text generation) to derive structured knowledge graphs from lecture videos.}
+          \resumeItem{Implemented a high-performance RAG pipeline leveraging \textbf{FAISS} vector indexing and FastAPI for efficient semantic search over multimodal content, achieving sub-200ms retrieval latency.}
+          \resumeItem{Focused on improving context grounding and retrieval visualization, achieving high user satisfaction (92\% accuracy) by fine-tuning models on domain-specific educational data.}
+        \vspace{-2pt}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{TestPilot Auto} -- Agentic Code Generation System $|$ \emph{Python, Selenium, LLM, Context Management}} {2024}
+        \resumeItemListStart
+          \resumeItem{Built an advanced agentic workflow leveraging Code Llama that autonomously analyzes DOM structures and generates robust Selenium/Cypress test scripts, reducing manual authoring time by 70\%.}
+          \resumeItem{Implemented \textbf{tool-calling capabilities} allowing the agent to execute generated tests in a sandbox environment, parse error logs, and iteratively self-correct code failures.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Library AI Search Agent} -- Enterprise Retrieval System $|$ \emph{RAG, NoSQL, NLP}} {2024}
+        \resumeItemListStart
+          \resumeItem{Engineered an intelligent retrieval agent connecting to catalog databases, processing over 10,000 queries with a custom ranking algorithm that prioritized academic relevance.}
+          \resumeItem{Optimized the vector search retrieval pipeline to handle complex natural language queries, reducing null-result rates and decreasing librarian support tickets by 45\%.}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Research \& Achievements}
+  \resumeSubHeadingListStart
+    \resumeItem{\textbf{Published Researcher:} IRJET - Traffic Sign Recognition using \textbf{Deep Learning} (Achieved 97\% classification accuracy)}
+    \resumeItem{\textbf{IBM Gold Winner:} Recognized for excellence in Security Technologies Research (2020)}
+    \resumeItem{Core contributor to an ongoing research effort on prompt evaluation in multi-agent orchestration systems at CWRU.}
+  \resumeSubHeadingListEnd
+
+\end{document}
+```
