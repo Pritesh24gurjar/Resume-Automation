@@ -1,0 +1,170 @@
+```latex
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% --- FONT & LAYOUT OPTIONS ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Optimized margins for readability vs. density
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% --- SECTION FORMATTING ---
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\pdfgentounicode=1
+
+% --- CUSTOM COMMANDS ---
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-4pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Pritesh Gurjar} \\ \vspace{1pt}
+    \small Cleveland, OH $|$ +1 (216)-240-8814 $|$ \href{mailto:pritesh.gurjar2024@gmail.com}{\underline{pritesh.gurjar2024@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/pritesh-gurjar-aa3b87175}{\underline{LinkedIn}} $|$
+    \href{https://github.com/Pritesh24gurjar}{\underline{GitHub}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {Case Western Reserve University}{Cleveland, OH}
+      {Master of Science in Computer Science $|$ GPA: 3.76/4.0}{Aug 2024 -- May 2026 (Expected)}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Generative AI, Distributed Systems, High-Performance Computing, Machine Learning, Computer Vision (Planned)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Deep Learning \& Vision:} PyTorch, TensorFlow, OpenCV, CNNs, Vision Transformers, Generative Models (GANs/Diffusion), Image Segmentation \\
+     \textbf{GenAI Engineering:} RAG Pipelines, Multimodal AI (CLIP, Whisper), Semantic Search, Re-ranking (Cohere), Prompt Engineering, Hallucination Evaluation \\
+     \textbf{Programming \& Research:} Python (NumPy, SciPy, Pandas, FastAPI), Java (Spring Boot), TypeScript, RESTful APIs, Statistical Modeling \\
+     \textbf{Data \& Infrastructure:} MongoDB (NoSQL), SQL, Vector Embeddings (Milvus/FAISS), Docker, Kubernetes, Azure, Linux/Unix, CI/CD \\
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Research \& Applied Experience}
+  \resumeSubHeadingListStart
+
+   \resumeSubheading
+      {AI Research Assistant -- Agentic AI Systems}{Oct 2024 -- Present}
+      {University Technology (UTech), CWRU}{Cleveland, OH}
+      \resumeItemListStart
+        \resumeItem{Architected and evaluated a \textbf{multi-agent system} using LangGraph and Model Context Protocol (MCP) to automate complex research workflows for 500+ faculty members.}
+        \resumeItem{Designed secure \textbf{tool-calling architectures} allowing LLMs to interface with internal APIs, focusing on controlled data flow and compliance, critical for secure research environments.}
+        \resumeItem{Developed an evaluation framework using \textbf{NDCG and MRR metrics} to benchmark retrieval and generation quality, achieving a 20\% improvement in answer relevance through iterative algorithmic refinement.}
+        \resumeItem{Optimized model deployment on Linux servers using prompt caching and component standardization, reducing latency and establishing a high-performance baseline for future AI research deployments.}
+      \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+    
+%-----------PROJECTS-----------
+\section{Selected Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\textbf{Multimodal Knowledge Synthesis System (Vision \& Audio)} $|$ \emph{PyTorch, CLIP, Whisper v3, FastAPI, FAISS}} {2024}
+        \resumeItemListStart
+          \resumeItem{Architected a full-stack GenAI application orchestrating \textbf{Whisper v3} (audio transcription) and \textbf{CLIP} (vision-language model) to convert unstructured educational videos into structured, searchable knowledge graphs.}
+          \resumeItem{Implemented a RAG-based retrieval system using \textbf{FAISS} vector indexing and \textbf{FastAPI}, enabling highly efficient semantic search over multimodal content with sub-200ms latency.}
+          \resumeItem{Focused on data preprocessing and feature extraction from visual and temporal data streams, demonstrating proficiency in handling complex multimodal datasets for retrieval tasks.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Deep Learning for Traffic Sign Recognition} $|$ \emph{TensorFlow, CNNs, Computer Vision}} {2020 (Published)}
+        \resumeItemListStart
+          \resumeItem{Developed and trained a Convolutional Neural Network (CNN) model for real-time traffic sign classification, achieving a validated accuracy of \textbf{97.1\%} on the GTSRB dataset.}
+          \resumeItem{Applied advanced image processing techniques (normalization, augmentation) to enhance model robustness against varying lighting conditions and occlusions, published in IRJET.}
+        \vspace{-2pt}\end{itemize}
+
+    \resumeProjectHeading
+        {\textbf{TestPilot Auto} -- Agentic Code Generation System $|$ \emph{Python, Selenium, LLM}} {2024}
+        \resumeItemListStart
+          \resumeItem{Built an \textbf{autonomous workflow} leveraging Code Llama that analyzes web structures and generates functional Selenium test scripts, reducing manual authoring time by 70\%.}
+          \resumeItem{Implemented self-correction loops and \textbf{tool-calling capabilities} allowing the agent to execute generated code, parse error logs, and iteratively refine the output based on execution feedback.}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE (Engineering Scale)-----------
+\section{Professional Experience (Engineering Scale)}
+  \resumeSubHeadingListStart
+
+      \resumeSubheading
+      {Software Engineer -- Full stack \& Data Engineering}{Jul 2022 -- Dec 2024}
+      {NielsenIQ}{Pune, India}
+      \resumeItemListStart
+        \resumeItem{Engineered scalable full-stack solutions using \textbf{Java Spring Boot} and \textbf{React}, optimizing RESTful interfaces to support high-throughput client data applications.}
+        \resumeItem{Designed and implemented high-volume data pipelines using PySpark and \textbf{MongoDB}, ensuring high-quality data availability for downstream ML feature stores processing over 10 million records daily.}
+        \resumeItem{Deployed microservices on \textbf{Docker and Kubernetes}, focusing on infrastructure optimization and load balancing to maintain high availability (99.9\% uptime) under peak loads.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+  \resumeSubHeadingListStart
+    \resumeItem{\textbf{Published Researcher:} IRJET - Traffic Sign Recognition using Deep Learning (97\% accuracy)}
+    \resumeItem{\textbf{IBM Gold Winner:} Recognized for excellence in Security Technologies Research (2020)}
+  \resumeSubHeadingListEnd
+
+\end{document}
+```
