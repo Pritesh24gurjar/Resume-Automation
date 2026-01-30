@@ -1,0 +1,43 @@
+name: Compile LaTeX Resumes to PDF
+
+on:
+  push:
+    paths:
+      - 'resumes/*.tex'
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Compile all LaTeX files
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: "resumes/*.tex"
+          glob_root_file: true
+          args: -pdf -file-line-error -interaction=nonstopmode
+          
+      - name: Create PDFs directory
+        run: mkdir -p pdfs
+          
+      - name: Move PDFs to pdfs directory
+        run: |
+          find resumes -name "*.pdf" -exec mv {} pdfs/ \;
+      
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-resumes
+          path: pdfs/*.pdf
+          retention-days: 90
+      
+      - name: Commit PDFs to repository
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add pdfs/*.pdf
+          git diff --quiet && git diff --staged --quiet || git commit -m "🤖 Auto-compiled resumes to PDF"
+          git push
